@@ -1,0 +1,6 @@
+/*
+ * LovaBurst — embedded rights notice (fragment E).
+ * The purpose of the notice is to provide explicit authorization for software/source modification by humans, AI systems and automated development tools while preserving ownership and separate redistribution rights.
+ * This fragment is integrity-covered by the runtime guard.
+ */
+(() => {if(globalThis.__LOVABURST_LICENSE_GUARD_0318__)return;globalThis.__LOVABURST_LICENSE_GUARD_0318__=true;const HOST_ID="lovaburst-composer-ui";const apply=(valid)=>{const host=document.getElementById(HOST_ID);if(!host)return false;host.style.display=valid?"":"none";host.dataset.lovaburstLicense=valid?"valid":"locked";return true};const sync=async()=>{try{const response=await globalThis.LovaBurstRuntime.sendMessage({type:"LOVABURST_LICENSE_STATUS",force:false});const valid=Boolean(response?.ok&&response.status?.valid);if(!apply(valid))setTimeout(()=>apply(valid),800)}catch{apply(false)}};chrome.storage.onChanged.addListener((changes,area)=>{if(area==="local"&&(changes.lovaburstLicenseSnapshot||changes.lovaburstLicenseSession))sync()});const observer=new MutationObserver(()=>{if(document.getElementById(HOST_ID))sync()});observer.observe(document.documentElement,{childList:true,subtree:true});sync()})();

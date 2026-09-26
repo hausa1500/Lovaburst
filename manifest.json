@@ -1,0 +1,99 @@
+{
+  "manifest_version": 3,
+  "name": "LovaBurst",
+  "version": "3.0.14",
+  "description": "LovaBurst 3.0.14 RC3 — server-authoritative hardened com correção real do login AUTH SITE, P-256 normalizado PC/mobile, storage estável, quota/audit, GitHub Direct e zero fallback premium offline.",
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting",
+    "sidePanel",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://lovable.dev/*",
+    "https://chatgpt.com/*",
+    "https://skzencpzievtdkmhikkh.supabase.co/*"
+  ],
+  "background": {
+    "service_worker": "src/background/service-worker-v020.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "LovaBurst",
+    "default_icon": {
+      "16": "assets/icon16.png",
+      "32": "assets/icon32.png",
+      "48": "assets/icon48.png",
+      "128": "assets/icon128.png"
+    },
+    "default_popup": "src/popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://lovable.dev/*"
+      ],
+      "js": [
+        "src/content/lovable-submit-guard.js"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://lovable.dev/*"
+      ],
+      "css": [
+        "src/content/lovable-legacy-ui.css"
+      ],
+      "js": [
+        "src/content/content-message-guard.js",
+        "src/shared/secure-storage-client.js",
+        "src/content/lovable-context-guard.js",
+        "src/shared/attachments.js",
+        "src/content/lovable.js",
+        "src/content/lovable-composer-core.js",
+        "src/content/lovable-attachments.js",
+        "src/content/lovable-integrations.js",
+        "src/content/lovable-composer.js",
+        "src/content/lovable-license-guard.js",
+        "src/content/lovable-run-monitor.js",
+        "src/content/lovable-logo-refresh.js",
+        "src/content/lovable-preview-refresh.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://chatgpt.com/*"
+      ],
+      "js": [
+        "src/content/content-message-guard.js",
+        "src/shared/secure-storage-client.js",
+        "src/content/chatgpt-context-guard.js",
+        "src/content/chatgpt-visibility.js",
+        "src/content/chatgpt.js",
+        "src/content/chatgpt-prompt-card.js",
+        "src/content/chatgpt-attachments.js",
+        "src/content/chatgpt-enhance.js",
+        "src/content/chatgpt-activity.js",
+        "src/content/chatgpt-result-refresh.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "side_panel": {
+    "default_path": "src/popup/popup.html"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArNCzS+xEL2uwSQ0xI+WPxfWWPp8f0Wer8QwO3TiinvKWcuGJ2lVrtdm8LfOCC7u+gpfetK4d1bXHYBOApiK9bS6G2CnwWWzaC5q2BTPHHsM4lI/NVWiqSZhe+UYnAAT524yBQ0yDTD82L/u8drYOjiJZBkebe1Mh30SJ/c+HPSDCABj5yAoOTamfUdlQ+Dnl2XKjte2VadTG2Fj0ZDqqpR5+cj9A/rkloajfDDF6YCRK4wF+a2Z3G/YboMfBX7FgksbzblROYi4mBUenQgcNMtDiK9AJvn0JXuY6x+2tW2U197Pj3m/u/5Th5N9ekgtj/tKxKSvGIXaS/8MCoCiqMQIDAQAB",
+  "icons": {
+    "16": "assets/icon16.png",
+    "32": "assets/icon32.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' https://skzencpzievtdkmhikkh.supabase.co;"
+  },
+  "version_name": "3.0.14 RC4"
+}

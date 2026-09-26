@@ -1,0 +1,62 @@
+.license-gate{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;padding:24px;background:radial-gradient(circle at 20% 0%,rgba(34,211,238,.12),transparent 34%),radial-gradient(circle at 90% 15%,rgba(124,58,237,.14),transparent 38%),#080b10;color:#f7fbff;font-family:Inter,ui-sans-serif,system-ui,sans-serif}.license-gate[hidden]{display:none}.license-card{width:min(100%,430px);border:1px solid rgba(148,163,184,.18);border-radius:24px;padding:28px;background:linear-gradient(180deg,rgba(18,24,34,.96),rgba(8,11,16,.98));box-shadow:0 28px 80px rgba(0,0,0,.55),0 0 0 1px rgba(34,211,238,.04) inset}.license-brand{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;margin-bottom:28px;text-align:center}.license-brand img{width:42px;height:42px}.license-brand strong{display:block;font-size:20px}.license-brand span{display:block;margin-top:2px;font-size:12px;color:#7dd3fc}.license-kicker{font-size:11px;font-weight:800;letter-spacing:.14em;color:#67e8f9}.license-card h1{margin:8px 0 8px;font-size:28px;line-height:1.08}.license-card p{margin:0 0 20px;color:#94a3b8;font-size:14px;line-height:1.55}.license-input{box-sizing:border-box;width:100%;height:48px;border:1px solid rgba(148,163,184,.24);border-radius:12px;background:#090d14;color:#f8fafc;padding:0 14px;font:700 14px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.03em;outline:none;text-transform:uppercase}.license-input:focus{border-color:#22d3ee;box-shadow:0 0 0 3px rgba(34,211,238,.1)}.license-button{width:100%;height:48px;margin-top:12px;border:0;border-radius:12px;background:linear-gradient(90deg,#06b6d4,#2563eb 52%,#7c3aed);color:white;font-weight:800;cursor:pointer}.license-button:disabled{opacity:.55;cursor:wait}.license-feedback{min-height:20px;margin-top:12px;font-size:12px;color:#fca5a5}.license-feedback[data-state="success"]{color:#86efac}.license-feedback[data-state="warning"]{color:#fcd34d}.license-actions{display:flex;justify-content:center;gap:14px;margin-top:18px}.license-actions a{color:#7dd3fc;text-decoration:none;font-size:12px}.license-meta{margin-top:22px;padding-top:16px;border-top:1px solid rgba(148,163,184,.12);font-size:11px;color:#64748b;text-align:center}.app-shell[data-license-locked="true"]>:not(.license-gate){visibility:hidden}
+.license-summary{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:12px;padding:12px 14px;border:1px solid rgba(52,211,153,.18);border-radius:14px;background:linear-gradient(120deg,rgba(52,211,153,.06),rgba(34,211,238,.035));}.license-summary[hidden]{display:none}.license-summary div{display:grid;gap:4px;min-width:0}.license-summary small{color:#94a3b8;font-size:11px}.license-summary small b{color:#cbd5e1}.license-summary span{font:800 9px/1 var(--mono);letter-spacing:.1em;color:#6ee7b7}.license-summary strong{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.license-summary>b{justify-self:end;padding:6px 8px;border:1px solid rgba(52,211,153,.22);border-radius:999px;background:rgba(52,211,153,.08);color:#86efac;font:800 9px/1 var(--mono)}.license-summary>b[data-state=warning]{border-color:rgba(245,158,11,.25);background:rgba(245,158,11,.08);color:#fcd34d}@media(max-width:390px){.license-summary{gap:8px;padding:10px}.license-summary strong{font-size:12px}.license-summary>b{padding:5px 6px;font-size:8px}}.license-summary-status-label{justify-items:end}.license-summary-status-label span{color:#94a3b8}@media(max-width:390px){.license-summary-status-label span{font-size:8px}}
+.license-summary{grid-template-columns:minmax(0,1fr) auto;align-items:center}.license-summary>.license-status-stack{display:grid;justify-items:end;align-items:end;gap:4px;min-width:92px}.license-status-stack>div{display:contents}.license-status-stack .license-summary-status-label{justify-items:end}.license-status-stack>b{justify-self:end}.license-input#licenseCustomerNameInput{text-transform:none}
+.license-summary{gap:14px;padding:11px 13px}.license-summary>div:first-child{display:grid;align-content:center;justify-items:start;gap:5px}.license-summary>div:first-child>span,.license-summary>div:first-child>strong{font-family:system-ui,-apple-system,Segoe UI,sans-serif}.license-summary>div:first-child>span{font-size:10px;font-weight:800;letter-spacing:.12em;line-height:1;color:#67e8f9}.license-summary>div:first-child>strong{font-size:14px;font-weight:750;line-height:1.15;color:#e9eef7}.license-status-stack{font-family:system-ui,-apple-system,Segoe UI,sans-serif!important}.license-status-stack .license-summary-status-label span{font-size:10px;font-weight:800;letter-spacing:.12em;line-height:1;color:#94a3b8}.license-summary #licenseDetailsExpiryValue{font-size:11px;font-weight:600;line-height:1.2;color:#cbd5e1}.license-summary #licenseDetailsStatusValue[data-state="active"]{padding:5px 8px;border-color:rgba(57,255,136,.34);background:rgba(57,255,136,.10);color:#39ff88!important;text-shadow:0 0 10px rgba(57,255,136,.42);font-size:10px;font-weight:850;letter-spacing:.1em}.license-summary #licenseDetailsStatusValue[data-state="warning"]{color:#fcd34d!important}
+.license-summary{grid-template-columns:minmax(0,1fr) auto!important;grid-template-rows:auto auto!important;gap:4px 12px!important;padding:9px 12px!important;align-items:center!important}.license-summary>.license-client-block{grid-column:1;grid-row:1 / span 2;display:grid!important;align-content:center;justify-items:start;gap:5px;min-width:0}.license-summary>.license-status-stack{grid-column:2;grid-row:1 / span 2;display:grid!important;align-content:center;justify-items:end;gap:5px;min-width:0}.license-expiry-row,.license-status-row{display:flex!important;align-items:center;justify-content:flex-end;gap:5px;white-space:nowrap}.license-expiry-row>span,.license-expiry-row #licenseDetailsExpiryValue{font-size:11px!important;line-height:1.2!important}.license-expiry-row>span{color:#94a3b8;font-weight:600}.license-expiry-row #licenseDetailsExpiryValue{color:#cbd5e1;font-weight:650}.license-status-row .license-summary-status-label{display:block!important}.license-status-row .license-summary-status-label span{font-size:10px!important;line-height:1!important}.license-status-row #licenseDetailsStatusValue[data-state="active"]{padding:0!important;border:0!important;background:transparent!important;color:#39ff88!important;text-shadow:0 0 9px rgba(57,255,136,.38);font:850 10px/1 system-ui,-apple-system,Segoe UI,sans-serif!important;letter-spacing:.1em}
+
+/* Compact two-row license summary */
+.license-summary{
+  grid-template-columns:minmax(0,1fr) auto!important;
+  grid-template-rows:auto auto!important;
+  column-gap:12px!important;
+  row-gap:3px!important;
+  padding:8px 12px!important;
+  align-items:center!important;
+}
+.license-summary>.license-client-block{display:contents!important}
+.license-summary>.license-status-stack{display:contents!important}
+.license-client-block>span{grid-column:1;grid-row:1;align-self:end;justify-self:start;font:800 10px/1.15 system-ui,-apple-system,Segoe UI,sans-serif!important;letter-spacing:.1em;color:#67e8f9!important}
+.license-client-block>strong{grid-column:1;grid-row:2;align-self:start;justify-self:start;font:750 13px/1.15 system-ui,-apple-system,Segoe UI,sans-serif!important;color:#e9eef7;max-width:125px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.license-expiry-row{grid-column:2;grid-row:1;align-self:end;justify-self:end;display:flex!important;align-items:center!important;gap:4px!important;white-space:nowrap}
+.license-status-row{grid-column:2;grid-row:2;align-self:start;justify-self:end;display:flex!important;align-items:center!important;gap:5px!important;white-space:nowrap}
+.license-expiry-row>span,.license-expiry-row #licenseDetailsExpiryValue{font:600 10px/1.15 system-ui,-apple-system,Segoe UI,sans-serif!important;letter-spacing:0!important}
+.license-expiry-row>span{color:#94a3b8!important}.license-expiry-row #licenseDetailsExpiryValue{color:#d8e0ec!important;font-weight:700!important}
+.license-status-row .license-summary-status-label{display:block!important}.license-status-row .license-summary-status-label span{font:800 9px/1.15 system-ui,-apple-system,Segoe UI,sans-serif!important;letter-spacing:.1em!important;color:#94a3b8!important}
+.license-status-row #licenseDetailsStatusValue[data-state="active"]{padding:0!important;border:0!important;border-radius:0!important;background:transparent!important;color:#39ff88!important;text-shadow:0 0 8px rgba(57,255,136,.45)!important;font:850 10px/1.15 system-ui,-apple-system,Segoe UI,sans-serif!important;letter-spacing:.08em!important}
+.license-status-row #licenseDetailsStatusValue[data-state="warning"]{padding:0!important;border:0!important;background:transparent!important;color:#fcd34d!important}
+
+/* Optical alignment refinement: expiry + status */
+.license-expiry-row>span,
+.license-expiry-row #licenseDetailsExpiryValue{
+  font-family:system-ui,-apple-system,Segoe UI,sans-serif!important;
+  font-size:10px!important;
+  font-weight:700!important;
+  line-height:1!important;
+  letter-spacing:0!important;
+}
+.license-expiry-row>span{color:#94a3b8!important}
+.license-expiry-row #licenseDetailsExpiryValue{color:#d8e0ec!important}
+.license-status-row{
+  display:flex!important;
+  align-items:baseline!important;
+  justify-content:flex-end!important;
+  line-height:1!important;
+}
+.license-status-row .license-summary-status-label,
+.license-status-row .license-summary-status-label span,
+.license-status-row #licenseDetailsStatusValue{
+  line-height:1!important;
+}
+.license-status-row .license-summary-status-label span{
+  display:inline-block!important;
+  font-family:system-ui,-apple-system,Segoe UI,sans-serif!important;
+  font-size:10px!important;
+  font-weight:800!important;
+}
+.license-status-row #licenseDetailsStatusValue[data-state="active"]{
+  display:inline-block!important;
+  font-family:system-ui,-apple-system,Segoe UI,sans-serif!important;
+  font-size:10px!important;
+  font-weight:850!important;
+  line-height:1!important;
+}
